@@ -1,4 +1,4 @@
-const FORM = document.getElementById("contactForm");
+const FORM = document.getElementById("contact-form");
 const STATUS = document.getElementById("status");
 
 FORM.addEventListener("submit", async (e) => {
