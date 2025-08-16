@@ -9,7 +9,7 @@ FORM.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(formData);
 
   try {
-    const res = await fetch("https://render.com/docs/web-services#port-binding", {
+    const res = await fetch("https://portfolio-backend-v18a.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
