@@ -254,7 +254,7 @@ footer {
 
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   h1 {
     font-family: cursive;
     font-size: 2.2rem;
@@ -266,6 +266,20 @@ footer {
 
   p, li {
     font-size: 0.95rem;
+  }
+
+  input {
+  max-width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: darkslategray;
+  color: white;
+  border: 1px solid;
+  border-color: white;
+  }
+
+  #subject {
+    max-width: 100%
   }
 }
 
@@ -294,6 +308,20 @@ footer {
   .header-icons img {
     width: 24px;
     height: 24px;
+  }
+
+  input {
+  max-width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: darkslategray;
+  color: white;
+  border: 1px solid;
+  border-color: white;
+  }
+
+  #subject {
+    max-width: 100%
   }
 }
 
