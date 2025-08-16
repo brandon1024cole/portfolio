@@ -252,6 +252,7 @@ textarea {
 footer {
   margin-top: 1rem;
   font-size: 0.1rem;
+  color: white;
 }
 
 
@@ -304,7 +305,7 @@ footer {
 
   .form-row {
     flex-direction: column;
-    gap: .2git rem
+    gap: .2rem
   }
 
   #subject {
