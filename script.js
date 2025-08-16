@@ -1,0 +1,24 @@
+const FORM = document.getElementById("contactForm");
+const STATUS = document.getElementById("status");
+
+FORM.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  STATUS.textContent = "Sending…";
+
+  const formData = new FormData(FORM);
+  const data = Object.fromEntries(formData);
+
+  try {
+    const res = await fetch("https://render.com/docs/web-services#port-binding", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+    STATUS.textContent = result.message || "Sent";
+    if (res.ok) FORM.reset();
+  } catch (err) {
+    STATUS.textContent = "Failed to send message.";
+  }
+});
