@@ -11,7 +11,7 @@ FORM.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(formData);
 
   try {
-    const res = await fetch("https://portfolio-backend-v18a.onrender.com", {
+    const res = await fetch("https://portfolio-backend-v18a.onrender.com/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -21,14 +21,13 @@ FORM.addEventListener("submit", async (e) => {
     STATUS.textContent = result.message || "Sent";
     if (res.ok) {
       FORM.reset();
-      clearBox()
     }
   } catch (err) {
     STATUS.textContent = "Failed to send message.";
   }
 });
 
-FORM.addEventListener("reset", clearBox);
+document.getElementById("clear").addEventListener("click", clearBox);
 
 function clearBox()
 {
