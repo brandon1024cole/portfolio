@@ -3,6 +3,8 @@ const STATUS = document.getElementById("status");
 
 FORM.addEventListener("submit", async (e) => {
   e.preventDefault();
+  STATUS.style.visibility='visible';
+  STATUS.style.padding="1rem";
   STATUS.textContent = "Sending…";
 
   const formData = new FormData(FORM);
@@ -17,8 +19,19 @@ FORM.addEventListener("submit", async (e) => {
 
     const result = await res.json();
     STATUS.textContent = result.message || "Sent";
-    if (res.ok) FORM.reset();
+    if (res.ok) {
+      FORM.reset();
+      clearBox()
+    }
   } catch (err) {
     STATUS.textContent = "Failed to send message.";
   }
 });
+
+FORM.addEventListener("reset", clearBox);
+
+function clearBox()
+{
+    STATUS.innerHTML = "";
+    STATUS.style.padding="0";
+}
