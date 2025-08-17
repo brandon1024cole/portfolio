@@ -21,12 +21,6 @@ header {
   color: white;
 }
 
-.logo {
-  display: flex;
-  font-weight: bold;
-  color: white;
-  gap: 20px;
-}
 
 a {
     color: white;
@@ -48,7 +42,7 @@ a:hover {
   background-color: darkslategray;
   text-decoration: underline;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -256,10 +250,79 @@ textarea {
   font-family: arial;
 }
 
+h3 {
+  font-size: 1.4rem;
+  text-decoration: underline;
+  margin-bottom:1rem;
+}
+
 footer {
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.1rem;
   color: white;
+  padding: 2rem 10rem;
+}
+
+.footerleft{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkgroups{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem;
+  gap:15px;
+}
+
+.linkgroups a {
+  font-family: sans-serif;
+}
+
+.linkrow{
+  font-size: 1rem;
+  gap:15px;
+  display:flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.footerright{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footericons{
+  display: flex;
+  flex-direction: row;
+  align-content: right;
+  gap: 1rem;
+}
+
+.footericons img{
+  width: 50px;
+  height: 50px;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.footericons img:hover{
+  opacity: 0.7;
+}
+
+#footer {
+  align-items: center;
+  font-family: cursive;
+  padding: 1.5rem;
 }
 
 
@@ -274,12 +337,33 @@ footer {
     font-size: 1.2rem;
   }
 
+  h3{
+    font-size: 1rem
+  }
+
+  .linkrow {
+    font-size: 0.8rem;
+  }
+
+  #connect{
+    margin-bottom: -0.2rem;
+  }
+
   p, li {
     font-size: 0.95rem;
   }
 
   #subject {
     max-width: 100%
+  }
+
+  footer{
+    padding: 0;
+  }
+
+  .footericons img{
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -303,6 +387,15 @@ footer {
   header {
     font-size: 1.2rem;
     padding: 3px 8px;
+  }
+
+  #connect{
+    margin-top: 0.2rem;
+    margin-bottom: -0.2rem;
+  }
+
+  footer{
+    flex-direction: column;
   }
 
   .header-icons img {
