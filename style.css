@@ -397,6 +397,7 @@ footer {
 
   footer{
     flex-direction: column;
+    gap: 1rem;
   }
 
   .header-icons img {
