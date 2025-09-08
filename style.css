@@ -6,12 +6,17 @@
   background-color: darkslategrey;
 }
 
+@font-face {
+  font-family: bebas;
+  src: url(./BebasNoteLight-LVEDg.ttf);
+}
+
 header {
   display: flex;
   justify-content: space-between; /* BC left, icons right */
   align-items: center;
   background-color: darkslategray;
-  padding: 4px 12px; /* thin header */
+  padding: 4px 12px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -25,7 +30,7 @@ header {
 a {
     color: white;
     text-decoration: none;
-    font-family: cursive;
+    font-family: sans-serif;
     transition: opacity 0.2s ease;
 }
 
@@ -46,7 +51,7 @@ a:hover {
   font-weight: bold;
   border: none;
   cursor: pointer;
-  font-family: cursive;
+  font-family: bebas;
 }
 
 .dropdown-content {
@@ -338,7 +343,7 @@ footer {
 
 @media (max-width: 992px) {
   h1 {
-    font-family: cursive;
+    font-family: bebas;
     font-size: 3.5rem;
   }
 
@@ -383,7 +388,7 @@ footer {
   }
 
   h1 {
-    font-family: cursive;
+    font-family: bebas;
     font-size: 3rem;
   }
 
@@ -437,7 +442,7 @@ footer {
   }
 
   h1 {
-    font-family: cursive;
+    font-family: bebas;
     font-size: 4rem;
   }
 
